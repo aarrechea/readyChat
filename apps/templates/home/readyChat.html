@@ -1,0 +1,58 @@
+<!-- Imports -->
+{% extends "layouts/base.html" %}
+{% load static %}
+
+
+<!-- Block stylesheets -->
+{% block stylesheets %}
+    <link rel="stylesheet" href="/static/assets/css/readyChat.css">
+{% endblock stylesheets %}
+    
+
+
+<!-- Block content -->
+{% block content %}
+    <!-- --- Includes --- -->
+    {% include 'home/readyChatModal.html' %}
+
+
+
+    <!-- --- Form --- -->
+    <form action="{% url 'home_patterns:ready' %}" method="post">
+        {% csrf_token %}
+
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-8'>
+                    <label class='form-label' for="txt_question" style='font-size:1rem; color:black'>
+                        Please, place your question, our AI will responde accordingly
+                    </label>
+                    
+                    <textarea 
+                        class='form-control' 
+                        name="txt_question" 
+                        id="txt_question"
+                        cols="30"
+                        rows="6"
+                        style="font-size:1.3rem; border-bottom:2rem;"
+                    ></textarea>
+
+                    <button id="btnQuestion" class="btn btn-primary" type="button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock content %}
+    
+
+{% block javascripts %}
+    <script src="{% static 'assets/js/readyChat.js' %}"></script>
+{% endblock javascripts %}
+
+
+
+
+
+
+
+

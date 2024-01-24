@@ -1,0 +1,51 @@
+<!-- Imports -->
+{% load static %}
+
+
+
+<!-- Html -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/assets/css/readyChatModal.css">
+    </head>
+
+
+
+    <!-- Body -->
+    <body>
+        <div id="modal">
+            <div id="modal-content">
+                <div id="modal-content-title">
+                    <p>ReadyChatAI, the best and most accurate answers </p>
+                </div>
+
+                <div id="modal-question-answer">
+                    <label>Your question</label>
+                    <textarea id="txt_question_modal" style="height:95%" disabled></textarea>
+                
+                    <label>Your answer</label>
+                    <textarea id="txt_answer_modal" style="height:95%" disabled></textarea>
+                </div>
+
+                <div id="divButtonCloseModal">
+                    <button id="btnCloseModal" class="btnCloseModal">Close</button>
+                    <button id="btnRephraseQuestion" class="btnCloseModal">Rephrase question</button>
+                </div>
+                
+            </div>            
+        </div> 
+    </body>
+
+
+
+    <!-- Scripts -->
+    <script src="{% static 'assets/js/core/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/readyChatModal.js' %}"></script>
+</html>
+
+
+
